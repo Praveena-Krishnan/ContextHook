@@ -1,10 +1,12 @@
-import React from 'react'
+import React ,{useContext}from 'react';
+import { UserContext } from './ComponentA';
 
-const ComponentD = (props) => {
+const ComponentD = () => {
+  const user=useContext(UserContext);
   return (
     <div className='box'>
-        <h1>Component D</h1>
-        <h2>{`bye ${props.user}`}</h2>
+        <h1>ComponentD</h1>
+        <h2>{`bye ${user}`}</h2>
         </div>
   )
 }
